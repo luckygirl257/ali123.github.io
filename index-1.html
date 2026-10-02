@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Discover and sell creative digital designs, templates, posters, and social media packs on DesignHub." />
+  <title>DesignHub — Premium Digital Designs</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#"><span class="brand-mark">◆</span> Design<span>Hub</span></a>
+    <nav id="navLinks">
+      <a href="#home">Home</a><a href="#shop">Shop</a><a href="#categories">Categories</a><a href="#sell">Sell designs</a>
+    </nav>
+    <div class="header-actions">
+      <label class="search"><span>⌕</span><input id="searchInput" type="search" placeholder="Search designs..." /></label>
+      <button class="icon-btn" id="cartToggle" aria-label="Open cart">🛒 <span id="cartCount">0</span></button>
+      <button class="menu-btn" id="menuBtn" aria-label="Toggle menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow">A marketplace for creative minds</p>
+        <h1>Premium Digital <span>Designs</span></h1>
+        <p class="hero-lead">Unique, creative and ready to use. Find designs for your brand, business, and next big idea.</p>
+        <div class="hero-buttons"><a class="btn primary" href="#shop">Explore designs <span>→</span></a><a class="btn ghost" href="#sell">Start selling</a></div>
+        <div class="hero-proof"><span>✦ Curated collections</span><span>✓ Instant access</span><span>♡ Independent creators</span></div>
+      </div>
+      <div class="hero-art" aria-label="Featured digital design artwork">
+        <div class="art-card art-one"><small>STUDIO NOTES</small><strong>GOOD<br/>VIBES<br/>ONLY</strong><span>CREATIVE COLLECTION / 01</span></div>
+        <div class="art-card art-two"><span class="sun"></span><strong>MAKE<br/>IT HAPPEN.</strong><small>POSTER SERIES</small></div>
+        <div class="art-card art-three"><span>✦</span><strong>CREATE<br/>YOUR<br/>FUTURE</strong></div>
+        <div class="floating-tag">New collection <b>↗</b></div>
+      </div>
+    </section>
+
+    <section class="benefits">
+      <div><span class="benefit-icon">↯</span><p><b>Instant access</b><small>Get your files after purchase</small></p></div>
+      <div><span class="benefit-icon">✦</span><p><b>Made by creators</b><small>Fresh ideas from real designers</small></p></div>
+      <div><span class="benefit-icon">▣</span><p><b>Clear licensing</b><small>Check each product's usage terms</small></p></div>
+      <div><span class="benefit-icon">♡</span><p><b>Support creators</b><small>Help independent talent grow</small></p></div>
+    </section>
+
+    <section class="section" id="categories">
+      <div class="section-heading"><div><p class="eyebrow">Find your style</p><h2>Browse categories</h2></div><a href="#shop" class="text-link">View all designs ↗</a></div>
+      <div class="category-grid">
+        <button class="category active" data-category="All"><span>✦</span><b>All designs</b><small>Explore everything</small></button>
+        <button class="category" data-category="Social Media"><span>▧</span><b>Social media</b><small>Posts & stories</small></button>
+        <button class="category" data-category="Posters"><span>▤</span><b>Posters</b><small>Print-ready art</small></button>
+        <button class="category" data-category="Branding"><span>◈</span><b>Branding</b><small>Logos & identity</small></button>
+        <button class="category" data-category="Templates"><span>▦</span><b>Templates</b><small>Save time</small></button>
+      </div>
+    </section>
+
+    <section class="section shop-section" id="shop">
+      <div class="section-heading"><div><p class="eyebrow">Handpicked for you</p><h2>Featured designs</h2><p class="muted">Discover assets to make your next project stand out.</p></div>
+        <select id="sortSelect" aria-label="Sort designs"><option value="featured">Sort: Featured</option><option value="low">Price: Low to high</option><option value="high">Price: High to low</option></select>
+      </div>
+      <div id="productGrid" class="product-grid"></div>
+      <p id="emptyMessage" class="empty hidden">No designs found. Try another search or category.</p>
+    </section>
+
+    <section class="sell-banner" id="sell">
+      <div class="sell-icon">✦</div><div><p class="eyebrow">Your creativity has value</p><h2>Start selling your designs</h2><p>Showcase your work, reach new customers, and grow your creative business.</p></div>
+      <button class="btn primary" id="sellBtn">Become a seller <span>→</span></button>
+    </section>
+
+    <section class="section how-section">
+      <div class="section-heading"><div><p class="eyebrow">Simple by design</p><h2>How it works</h2></div></div>
+      <div class="steps"><article><span>01</span><h3>Discover</h3><p>Browse creative assets and find the right fit for your project.</p></article><article><span>02</span><h3>Purchase</h3><p>Add designs to your cart and review your order.</p></article><article><span>03</span><h3>Create</h3><p>Use your purchased files according to their license.</p></article></div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-main"><div><a class="brand" href="#"><span class="brand-mark">◆</span> Design<span>Hub</span></a><p>A home for creativity. Discover, share, and sell digital designs.</p><div class="socials"><a href="#" aria-label="Instagram">◎</a><a href="#" aria-label="Pinterest">P</a><a href="#" aria-label="TikTok">♪</a></div></div>
+    <div><b>Explore</b><a href="#shop">Shop designs</a><a href="#categories">Categories</a><a href="#sell">Sell on DesignHub</a></div>
+    <div><b>Help</b><a href="#faq">FAQs</a><a href="#faq">License guide</a><a href="#contact">Contact</a></div>
+    <div id="contact"><b>Stay inspired</b><p>Get new collections and creative tips.</p><form id="newsletterForm"><input type="email" id="newsletterEmail" placeholder="Your email address" required/><button class="btn primary" type="submit">Join</button></form><small id="newsletterMsg"></small></div></div>
+    <div class="footer-bottom"><span>© 2026 DesignHub.</span><span>Made for creative minds ✦</span></div>
+  </footer>
+
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping cart">
+    <div class="cart-head"><h2>Your cart <span id="cartTitleCount">(0)</span></h2><button id="closeCart" class="close-btn" aria-label="Close cart">×</button></div>
+    <div id="cartItems" class="cart-items"><p class="muted">Your cart is empty.</p></div>
+    <div class="cart-total"><span>Total</span><b id="cartTotal">Rs 0</b></div>
+    <button class="btn primary full" id="checkoutBtn">Checkout & Pay</button>
+    <p class="tiny muted">Payment verification is currently manual/demo. Automatic gateway verification needs a secure backend.</p>
+  </aside>
+  <div class="scrim" id="scrim"></div>
+
+  <dialog id="productDialog" class="modal"><button class="close-btn modal-close" id="closeProduct" aria-label="Close">×</button><div id="productDetail"></div></dialog>
+
+  <dialog id="checkoutDialog" class="modal checkout-modal">
+    <button class="close-btn modal-close" id="closeCheckout" aria-label="Close">×</button>
+    <p class="eyebrow">Secure checkout</p>
+    <h2>Complete your order</h2>
+    <p class="muted">Choose JazzCash or Easypaisa, then submit your payment transaction ID for manual verification.</p>
+    <div id="checkoutSummary" class="checkout-items"></div>
+    <div class="checkout-total"><span>Total</span><b id="checkoutTotal">Rs 0</b></div>
+
+    <div class="payment-methods">
+      <label class="payment-method"><input type="radio" name="paymentMethod" value="jazzcash" checked><b>🟢 JazzCash</b><small>Pay using your JazzCash account</small></label>
+      <label class="payment-method"><input type="radio" name="paymentMethod" value="easypaisa"><b>🔵 Easypaisa</b><small>Pay using your Easypaisa account</small></label>
+    </div>
+
+    <div id="paymentInstructions" class="payment-instructions"></div>
+
+    <form id="checkoutForm" class="checkout-form">
+      <label>Your name<input id="customerName" required placeholder="Your name"></label>
+      <label>Mobile number<input id="customerPhone" required inputmode="tel" placeholder="03XXXXXXXXX"></label>
+      <label>Email address<input id="customerEmail" required type="email" placeholder="you@example.com"></label>
+      <label>Transaction ID / Reference<input id="transactionId" required placeholder="Enter payment reference"></label>
+      <button class="btn primary full" type="submit">Submit order →</button>
+    </form>
+    <p id="paymentMessage" class="payment-message"></p>
+  </dialog>
+
+  <dialog id="sellerDialog" class="modal seller-modal"><button class="close-btn modal-close" id="closeSeller" aria-label="Close">×</button><p class="eyebrow">Creator studio</p><h2>Start your seller profile</h2><p class="muted">This demo lets you preview the seller sign-up flow. A real store needs a backend and secure file storage.</p><form id="sellerForm"><label>Your display name<input required id="sellerName" placeholder="e.g. Ali Designs"/></label><label>Email address<input required type="email" id="sellerEmail" placeholder="you@example.com"/></label><label>What do you create?<select id="sellerType"><option>Social media designs</option><option>Posters & illustrations</option><option>Branding & logos</option><option>Templates</option><option>Other</option></select></label><button class="btn primary full" type="submit">Create demo profile</button></form><p id="sellerMessage" class="success-message"></p></dialog>
+
+  <div class="toast" id="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>
