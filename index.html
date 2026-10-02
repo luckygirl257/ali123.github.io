@@ -27,7 +27,7 @@
         <h1>Premium Digital <span>Designs</span></h1>
         <p class="hero-lead">Unique, creative and ready to use. Find designs for your brand, business, and next big idea.</p>
         <div class="hero-buttons"><a class="btn primary" href="#shop">Explore designs <span>→</span></a><a class="btn ghost" href="#sell">Start selling</a></div>
-        <div class="hero-proof"><span>✦  Curated collections</span><span>✓  Instant access</span><span>♡  Independent creators</span></div>
+        <div class="hero-proof"><span>✦ Curated collections</span><span>✓ Instant access</span><span>♡ Independent creators</span></div>
       </div>
       <div class="hero-art" aria-label="Featured digital design artwork">
         <div class="art-card art-one"><small>STUDIO NOTES</small><strong>GOOD<br/>VIBES<br/>ONLY</strong><span>CREATIVE COLLECTION / 01</span></div>
@@ -79,20 +79,47 @@
     <div><b>Explore</b><a href="#shop">Shop designs</a><a href="#categories">Categories</a><a href="#sell">Sell on DesignHub</a></div>
     <div><b>Help</b><a href="#faq">FAQs</a><a href="#faq">License guide</a><a href="#contact">Contact</a></div>
     <div id="contact"><b>Stay inspired</b><p>Get new collections and creative tips.</p><form id="newsletterForm"><input type="email" id="newsletterEmail" placeholder="Your email address" required/><button class="btn primary" type="submit">Join</button></form><small id="newsletterMsg"></small></div></div>
-    <div class="footer-bottom"><span>© 2026 DesignHub. Demo storefront.</span><span>Made for creative minds ✦</span></div>
+    <div class="footer-bottom"><span>© 2026 DesignHub.</span><span>Made for creative minds ✦</span></div>
   </footer>
 
   <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping cart">
     <div class="cart-head"><h2>Your cart <span id="cartTitleCount">(0)</span></h2><button id="closeCart" class="close-btn" aria-label="Close cart">×</button></div>
     <div id="cartItems" class="cart-items"><p class="muted">Your cart is empty.</p></div>
     <div class="cart-total"><span>Total</span><b id="cartTotal">Rs 0</b></div>
-    <button class="btn primary full" id="checkoutBtn">Continue to checkout</button>
-    <p class="tiny muted">Demo only: checkout and payments are not connected.</p>
+    <button class="btn primary full" id="checkoutBtn">Checkout & Pay</button>
+    <p class="tiny muted">Payment verification is currently manual/demo. Automatic gateway verification needs a secure backend.</p>
   </aside>
   <div class="scrim" id="scrim"></div>
 
   <dialog id="productDialog" class="modal"><button class="close-btn modal-close" id="closeProduct" aria-label="Close">×</button><div id="productDetail"></div></dialog>
+
+  <dialog id="checkoutDialog" class="modal checkout-modal">
+    <button class="close-btn modal-close" id="closeCheckout" aria-label="Close">×</button>
+    <p class="eyebrow">Secure checkout</p>
+    <h2>Complete your order</h2>
+    <p class="muted">Choose JazzCash or Easypaisa, then submit your payment transaction ID for manual verification.</p>
+    <div id="checkoutSummary" class="checkout-items"></div>
+    <div class="checkout-total"><span>Total</span><b id="checkoutTotal">Rs 0</b></div>
+
+    <div class="payment-methods">
+      <label class="payment-method"><input type="radio" name="paymentMethod" value="jazzcash" checked><b>🟢 JazzCash</b><small>Pay using your JazzCash account</small></label>
+      <label class="payment-method"><input type="radio" name="paymentMethod" value="easypaisa"><b>🔵 Easypaisa</b><small>Pay using your Easypaisa account</small></label>
+    </div>
+
+    <div id="paymentInstructions" class="payment-instructions"></div>
+
+    <form id="checkoutForm" class="checkout-form">
+      <label>Your name<input id="customerName" required placeholder="Your name"></label>
+      <label>Mobile number<input id="customerPhone" required inputmode="tel" placeholder="03XXXXXXXXX"></label>
+      <label>Email address<input id="customerEmail" required type="email" placeholder="you@example.com"></label>
+      <label>Transaction ID / Reference<input id="transactionId" required placeholder="Enter payment reference"></label>
+      <button class="btn primary full" type="submit">Submit order →</button>
+    </form>
+    <p id="paymentMessage" class="payment-message"></p>
+  </dialog>
+
   <dialog id="sellerDialog" class="modal seller-modal"><button class="close-btn modal-close" id="closeSeller" aria-label="Close">×</button><p class="eyebrow">Creator studio</p><h2>Start your seller profile</h2><p class="muted">This demo lets you preview the seller sign-up flow. A real store needs a backend and secure file storage.</p><form id="sellerForm"><label>Your display name<input required id="sellerName" placeholder="e.g. Ali Designs"/></label><label>Email address<input required type="email" id="sellerEmail" placeholder="you@example.com"/></label><label>What do you create?<select id="sellerType"><option>Social media designs</option><option>Posters & illustrations</option><option>Branding & logos</option><option>Templates</option><option>Other</option></select></label><button class="btn primary full" type="submit">Create demo profile</button></form><p id="sellerMessage" class="success-message"></p></dialog>
+
   <div class="toast" id="toast" role="status"></div>
   <script src="script.js"></script>
 </body>
