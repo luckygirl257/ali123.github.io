@@ -122,5 +122,46 @@
 
   <div class="toast" id="toast" role="status"></div>
   <script src="script.js"></script>
+<!-- Seller Registration -->
+<section id="seller-registration" style="padding:40px 20px;max-width:600px;margin:auto;">
+  <h2>Create Seller ID</h2>
+  <p>Create your seller account to upload and sell designs.</p>
+
+  <input id="sellerName" type="text" placeholder="Seller Name"
+         style="width:100%;padding:12px;margin:8px 0;">
+
+  <input id="sellerEmail" type="email" placeholder="Email"
+         style="width:100%;padding:12px;margin:8px 0;">
+
+  <button onclick="createSellerID()"
+          style="padding:12px 20px;margin-top:10px;cursor:pointer;">
+    Create Seller ID
+  </button>
+
+  <div id="sellerResult" style="margin-top:20px;"></div>
+</section>
+
+<script>
+function createSellerID() {
+  const name = document.getElementById("sellerName").value.trim();
+  const email = document.getElementById("sellerEmail").value.trim();
+
+  if (!name || !email) {
+    alert("Please enter your name and email.");
+    return;
+  }
+
+  const sellerID = "SELLER-" + Math.floor(100000 + Math.random() * 900000);
+
+  localStorage.setItem("sellerID", sellerID);
+  localStorage.setItem("sellerName", name);
+  localStorage.setItem("sellerEmail", email);
+
+  document.getElementById("sellerResult").innerHTML =
+    "<h3>Your Seller ID</h3>" +
+    "<strong>" + sellerID + "</strong>" +
+    "<p>Keep this ID safe for your seller account.</p>";
+}
+</script>
 </body>
 </html>
