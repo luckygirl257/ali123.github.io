@@ -7,7 +7,7 @@ const products = [
  {id:6,title:"Business Card Template",category:"Templates",price:699,description:"Clean business card layouts designed for easy customization.",rating:"4.9",reviews:27,bg:"#d9e3ee",fg:"#20334b",art:"YOUR\nBRAND",sub:"IDENTITY KIT",symbol:"◆"},
  {id:7,title:"Mountain Wallpaper Pack",category:"Templates",price:349,description:"Atmospheric landscape-inspired wallpapers for your devices.",rating:"4.6",reviews:13,bg:"#d7b28b",fg:"#1e3245",art:"FIND\nYOUR\nWILD",sub:"WALLPAPER SERIES",symbol:"▲"},
  {id:8,title:"Creator Media Kit",category:"Social Media",price:899,description:"A presentation template for creators, portfolios and partnerships.",rating:"4.8",reviews:19,bg:"#eadff3",fg:"#442e64",art:"CREATOR\nKIT",sub:"YOUR STORY / YOUR BRAND",symbol:"✦"},
-{id:9,title:"Modern branding design",category:"Branding Graphic",price:600,description:"Modern branding design for businesses and brands.",rating:"5.0",reviews:0,bg:"#e8eef5",fg:"#26384d",art:"MODERN\nBRAND",sub:"YOUR BRAND / YOUR STYLE",image:"https://xckgwsxyhebysmkjbqfm.supabase.co/storage/v1/object/public/design%20files/IMG-20261002-WA0022.jpg",symbol:"✦"}];
+{id:9,title:"Modern branding design",category:"Branding",price:600,description:"Modern branding design for businesses and brands.",rating:"5.0",reviews:0,bg:"#e8eef5",fg:"#26384d",art:"MODERN\nBRAND",sub:"YOUR BRAND / YOUR STYLE",image:"https://xckgwsxyhebysmkjbqfm.supabase.co/storage/v1/object/public/design%20files/IMG-20261002-WA0022.jpg",symbol:"✦"}];
 const money = n => "Rs " + n.toLocaleString("en-PK");
 let activeCategory = "All", cart = [], favorites = new Set();
 const grid = document.getElementById("productGrid");
